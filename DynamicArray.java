@@ -8,9 +8,9 @@ public class DynamicArray {
     private static final int RESIZE_FACTOR = 2;
 
     /** The underlying array of the data structure */
-    private String[] underlying;
+    public String[] underlying;
     /** How many elements have been added to the underlying array */
-    private int occupancy;
+    public int occupancy;
 
     /** Basic constructor */
     public DynamicArray(int size) {
@@ -40,7 +40,7 @@ public class DynamicArray {
      * 
      * @param resize_by int factor multiply the size of the underlying array
      */
-    private void resize() {
+    public void resize() {
         // Create temporary array of DOUBLE the size of the underlying array
         String[] temp = new String[2 * this.underlying.length];
         for (int i = 0; i < this.underlying.length; i++) {
